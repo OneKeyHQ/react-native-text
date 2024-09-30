@@ -1,6 +1,6 @@
 {
   "name": "@onekeyfe/react-native-text-input",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "text-input",
   "source": "./src/index.tsx",
   "types": "./lib/typescript/module/src/index.d.ts",
@@ -54,6 +54,7 @@
     "type": "git",
     "url": "git+https://github.com/OneKeyHQ/react-native-text.git"
   },
+  "author": "huhuanming <workboring@gmail.com> (https://github.com/huhuanming)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/OneKeyHQ/react-native-text/issues"
