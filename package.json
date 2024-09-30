@@ -52,14 +52,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/huhuanming/react-native-text-input.git"
+    "url": "git+https://github.com/OneKeyHQ/react-native-text.git"
   },
-  "author": "huhuanming <workboring@gmail.com> (https://github.com/huhuanming)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/huhuanming/react-native-text-input/issues"
+    "url": "https://github.com/OneKeyHQ/react-native-text/issues"
   },
-  "homepage": "https://github.com/huhuanming/react-native-text-input#readme",
+  "homepage": "https://github.com/OneKeyHQ/react-native-text/issues#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

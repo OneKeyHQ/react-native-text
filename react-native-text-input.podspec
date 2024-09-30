@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.authors      = package["author"]
 
   s.platforms    = { :ios => min_ios_version_supported }
-  s.source       = { :git => "https://github.com/huhuanming/react-native-text-input.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/OneKeyHQ/react-native-text.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,mm,cpp}"
 
