@@ -4,7 +4,7 @@
   "description": "text-input",
   "source": "./src/index.tsx",
   "types": "./lib/typescript/module/src/index.d.ts",
-  "main": "./lib/commonjs/index.js",
+  "main": "./src/index.tsx",
   "module": "./lib/module/index.js",
   "files": [
     "src",
