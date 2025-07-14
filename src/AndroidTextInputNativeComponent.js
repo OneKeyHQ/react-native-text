@@ -758,10 +758,10 @@ export const __INTERNAL_VIEW_CONFIG: PartialViewConfig = {
   },
 };
 
-// let AndroidTextInputNativeComponent = NativeComponentRegistry.get<NativeProps>(
-//   'AndroidTextInput',
-//   () => __INTERNAL_VIEW_CONFIG,
-// );
+let AndroidTextInputNativeComponent = NativeComponentRegistry.get<NativeProps>(
+  'OneKeyTextInput',
+  () => __INTERNAL_VIEW_CONFIG,
+);
 
 // flowlint-next-line unclear-type:off
-// export default ((AndroidTextInputNativeComponent: any): HostComponent<NativeProps>);
+export default ((AndroidTextInputNativeComponent: any): HostComponent<NativeProps>);
