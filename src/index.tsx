@@ -3,7 +3,7 @@ import type { ComponentType } from 'react';
 import TextInputView from './Input';
 import type { ITextInputProps } from './type';
 
-export * from './TextInputViewNativeComponent';
+// export * from './TextInputViewNativeComponent';
 
 export type {
   IPasteEventPayloadItem,
