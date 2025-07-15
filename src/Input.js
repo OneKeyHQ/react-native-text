@@ -1662,6 +1662,7 @@ function InternalTextInput(props: TextInputProps): React.Node {
           : selectionHandleColor,
       cursorColor: cursorColor === undefined ? selectionColor : cursorColor,
     };
+    const { onPaste, ...rest } = otherProps;
     textInput = (
       /* $FlowFixMe[prop-missing] the types for AndroidTextInput don't match up
        * exactly with the props for TextInput. This will need to get fixed */
@@ -1674,9 +1675,10 @@ function InternalTextInput(props: TextInputProps): React.Node {
       <AndroidTextInput
         // Figure out imperative + forward refs.
         ref={(ref: $FlowFixMe)}
-        {...otherProps}
+        {...rest}
         {...colorProps}
         {...eventHandlers}
+        onPaste={onPaste}
         accessibilityState={_accessibilityState}
         accessibilityLabelledBy={_accessibilityLabelledBy}
         accessible={accessible}
