@@ -10,10 +10,23 @@ import androidx.annotation.Nullable
 import com.facebook.react.uimanager.UIManagerHelper
 import com.facebook.react.views.textinput.ReactEditText
 import so.onekey.app.wallet.pasteinput.PasteWatcher
+import android.view.Gravity
 
 class TextInputView(context: Context) : ReactEditText(context) {
 
     private var mPasteWatcher: PasteWatcher? = null
+
+    init {
+        includeFontPadding = false
+    }
+
+    override fun scrollTo(x: Int, y: Int) {
+        if (gravity and Gravity.VERTICAL_GRAVITY_MASK == Gravity.CENTER_VERTICAL) {
+            super.scrollTo(x, 0)
+        } else {
+            super.scrollTo(x, y)
+        }
+    }
 
     override fun onTextContextMenuItem(id: Int): Boolean {
         if (id == android.R.id.paste || id == android.R.id.pasteAsPlainText) {

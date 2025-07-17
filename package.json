@@ -1,6 +1,6 @@
 {
   "name": "@onekeyfe/react-native-text-input",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "text-input",
   "source": "./src/index.tsx",
   "types": "./lib/typescript/src/index.d.ts",
