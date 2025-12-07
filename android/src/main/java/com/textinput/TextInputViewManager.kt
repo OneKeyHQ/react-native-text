@@ -15,7 +15,7 @@ import so.onekey.app.wallet.pasteinput.PasteWatcher
 @ReactModule(name = ReactTextInputManager.REACT_CLASS)
 class TextInputViewManager() : ReactTextInputManager() {
 
-  companion object {
+    companion object {
         const val REACT_CLASS = "OneKeyTextInput"
     }
 
@@ -33,9 +33,12 @@ class TextInputViewManager() : ReactTextInputManager() {
         return editText
     }
 
-    override fun getExportedCustomDirectEventTypeConstants(): Map<String, Any>? {
-        val baseEventTypeConstants = super.getExportedCustomDirectEventTypeConstants()?.toMutableMap()
-        baseEventTypeConstants?.put("topPaste", MapBuilder.of("registrationName", "onPaste"))
+    // Fix return type to match ReactTextInputManager's definition, which is Map<String, Any>
+    override fun getExportedCustomDirectEventTypeConstants(): Map<String, Any> {
+        val baseEventTypeConstants =
+            (super.getExportedCustomDirectEventTypeConstants() as? MutableMap<String, Any>)
+                ?: mutableMapOf()
+        baseEventTypeConstants["topPaste"] = MapBuilder.of("registrationName", "onPaste")
         return baseEventTypeConstants
     }
 
@@ -55,7 +58,8 @@ class TextInputViewManager() : ReactTextInputManager() {
 
         init {
             val reactContext = UIManagerHelper.getReactContext(editText)
-            mEventDispatcher = UIManagerHelper.getEventDispatcherForReactTag(reactContext, editText.id)!!
+            mEventDispatcher =
+                UIManagerHelper.getEventDispatcherForReactTag(reactContext, editText.id)!!
             mSurfaceId = UIManagerHelper.getSurfaceId(reactContext)
         }
 
